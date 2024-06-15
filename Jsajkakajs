@@ -1,0 +1,105 @@
+local gui = Instance.new("ScreenGui")
+gui.Name = "patrickGui"
+gui.Parent = game.CoreGui
+
+--screengui = gui
+
+
+
+	local TextButton = Instance.new("TextButton")
+-- Text
+TextButton.Text = "Close"
+TextButton.TextSize = 25
+-- Color
+TextButton.TextColor3 = Color3.new(75, 151, 75)
+TextButton.BackgroundColor3 = Color3.new(0, 1, 1)
+TextButton.BorderColor3 = Color3.new(194, 218, 184)
+-- thickness
+TextButton.BorderSizePixel = 3
+-- Text Code
+TextButton.Font = Enum.Font.Code
+-- Size
+TextButton.Size = UDim2.new(0.2, 0, 0.1, 0)
+-- Posisition
+TextButton.Position = UDim2.new(0, 0, 0.2, 0)
+-- Function
+TextButton.MouseButton1Click:Connect (function()
+Rayfield:Destroy()
+end)
+TextButton.Parent = gui
+TextButton.Draggable = false
+
+	local cornerUI = Instance.new("UICorner")
+cornerUI.CornerRadius = UDim.new(0, 5)
+cornerUI.Parent = TextButton
+
+	local uiStroke = Instance.new("UIStroke")
+    uiStroke.Color = Color3.new(0, 0, 0)
+    uiStroke.Thickness = 2
+    uiStroke.Parent = TextButton
+    
+local TextButton1 = Instance.new("TextButton")
+-- Text
+TextButton1.Text = "Open"
+TextButton1.TextSize = 25
+-- Color
+TextButton1.TextColor3 = Color3.new(75, 151, 75)
+TextButton1.BackgroundColor3 = Color3.new(0, 1, 1)
+TextButton1.BorderColor3 = Color3.new(194, 218, 184)
+-- thickness
+TextButton1.BorderSizePixel = 3
+-- Text Code
+TextButton1.Font = Enum.Font.Code
+-- Size
+TextButton1.Size = UDim2.new(0.2, 0, 0.1, 0)
+-- Posisition
+TextButton1.Position = UDim2.new(0, 0, 0.1, 0)
+-- Function
+TextButton1.MouseButton1Click:Connect (function()
+loadstring(game:HttpGet("https://pastebin.com/raw/1YxcKmVF"))()
+end)
+TextButton1.Parent = gui
+TextButton1.Draggable = false
+
+	local cornerUI = Instance.new("UICorner")
+cornerUI.CornerRadius = UDim.new(0, 5)
+cornerUI.Parent = TextButton1
+
+	local uiStroke = Instance.new("UIStroke")
+    uiStroke.Color = Color3.new(0, 0, 0)
+    uiStroke.Thickness = 2
+    uiStroke.Parent = TextButton1
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Rayfield Example Window",
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "KeyVer",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"FalseSubs"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+local TabMain = Window:CreateTab("MAIN", 4483362458) -- Title, Image
+
+local TabBB = Window:CreateTab("Blade Ball", 4483362458) -- Title, Image
+
+
+Rayfield:LoadConfiguration()
+    
